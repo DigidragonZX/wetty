@@ -52,7 +52,7 @@ export default function startWeTTy(
       });
 
       if (sshUser) {
-        spawn(socket, args);
+        return spawn(socket, args);
       } else {
         login(socket)
           .then((username: string) => {
